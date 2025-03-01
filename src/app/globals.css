@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p {
+    @apply text-pretty font-light;
+  }
+  html {
+    @apply text-[62.5%] bg-backgroundClr text-fontColor2 selection:bg-accent selection:text-backgroundClr;
+  }
+
+  body {
+    @apply font-quicksand bg-backgroundClr;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-hurme;
+  }
+  .h2-heading {
+    @apply text-5xl lg:text-8xl;
+  }
+  .h3-heading {
+    @apply text-3xl lg:text-5xl xl:text-6xl 2xl:text-8xl;
+  }
+  .bold {
+    @apply font-bold;
+  }
+}
+
+@layer utilities {
+  .text-background-color {
+    @apply bg-gradient-to-br from-fontColor to-primary1 bg-clip-text text-transparent;
+  }
+  .coloredBgSectionMargin {
+    @apply mx-sectionInlineMargin lg:mx-lgsectionInlineMargin xl:mx-xlsectionInlineMargin 2xl:mx-2xlsectionInlineMargin;
+  }
+  .coloredBgSectionPadding {
+    @apply p-BgColoredsectionPadding lg:p-lgBgColoredsectionPadding xl:p-xlBgColoredsectionPadding 2xl:p-2xlBgColoredsectionPadding;
+  }
+  .mainParagraph {
+    @apply text-2xl lg:text-3xl 2xl:text-6xl font-light first-letter:uppercase text-darkGrey;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+:root {
+  --background: #eff4f4;
+  --foreground: #212324;
+  --primary: #dce6ee;
+  --secondary: #1e2547;
+  --accent: #33b1d9;
+  --accent2: #b8eeff;
+  --accent3: #30b0d9;
+  --fadedjade: #40707b;
+  --gray: #d1d5db;
+  --darkGrey: #6b7280;
+  --lightBlue: #e0eaff;
+
+  --logo-color: #eff4f4;
+
+  --lilac: #cea5c7;
+  --loulou: #471044;
+
+  --reef: #c4ffa5;
+  --greenPea: #105a41;
+
+  --midnightBlue: #0a3362;
+  --grainBrown: #e3cdb0;
+
+  --monaLisa: #ffa897;
+  --ceriseRed: #d53169;
+
+  --rockSpray: #b84800;
+  --brightSun: #ffd731;
+
+  --monza: #c3131e;
+  --porsche: #f0b978;
+
+  --shark: #2a2a2e;
+  --primeRose: #ebf29c;
+
+  --moonMist: #daddd0;
+  --blueRibbon: #364ce4;
+
+  --lightYellow: #fdeea9;
+  --babyCream: #ecdbcc;
+  --pistachio: #e1f4ad;
+  --babyPink: #ffc7b9;
+  --lightGreen: #cae8de;
+
+  --radial-gradient-background: 250, 250, 250;
+  --solid-color-background: 15, 15, 15;
+  --overlay-color: 255, 255, 255;
+
+  --navbarHeight: 7rem;
+  --us-navbarHeight: 5rem;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+.no-tailwind {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  code,
+  ul,
+  ol,
+  li,
+  table,
+  img {
+    all: revert; /* Revert to browser defaults */
+  }
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.container {
+  @apply max-w-[145rem] mx-auto px-4;
+}
+.container2 {
+  @apply max-w-[145rem] mx-auto;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.footer-logo {
+  --logo-color: var(--logo-color);
+}
+
+.animation-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 99;
+  background-color: var(--background);
+}
+.radial-gradient {
+  background: radial-gradient(
+      circle at 50% 0%,
+      rgba(var(--radial-gradient-background), 0.05) 0%,
+      transparent 60%
+    )
+    rgba(var(--solid-color-background), 1);
+}
+.radial-gradient2 {
+  background: radial-gradient(
+      circle at 50% 0%,
+      rgba(var(--radial-gradient-background), 0.05) 0%,
+      transparent 60%
+    )
+    var(--accent);
+}
+
+.linear-mask {
+  mask-image: linear-gradient(
+    -75deg,
+    white calc(var(--x) + 20%),
+    transparent calc(var(--x) + 30%),
+    white calc(var(--x) + 100%)
+  );
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    white calc(var(--x) + 20%),
+    transparent calc(var(--x) + 30%),
+    white calc(var(--x) + 100%)
+  );
+}
+.linear-overlay {
+  background-image: linear-gradient(
+    -75deg,
+    rgba(var(--overlay-color), 0.1) calc(var(--x) + 20%),
+    rgba(var(--overlay-color), 0.5) calc(var(--x) + 25%),
+    rgba(var(--overlay-color), 0.1) calc(var(--x) + 100%)
+  );
+  mask: linear-gradient(black, black) content-box, linear-gradient(black, black);
+  -webkit-mask: linear-gradient(black, black) content-box,
+    linear-gradient(black, black);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}

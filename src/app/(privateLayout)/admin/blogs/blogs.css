@@ -1,0 +1,100 @@
+.tiptap.ProseMirror:focus-visible {
+  outline: none !important;
+}
+.tiptap {
+  outline: none !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Style the active page button */
+body.dark .custom-paginator .p-paginator-page.p-highlight {
+  background-color: #10151b; /* Active page background color */
+  color: white; /* Active page text color */
+  border: 2px dashed #4a4a4a;
+}
+body.dark .custom-paginator .p-paginator-page:hover {
+  background-color: #10151b /* Change background on hover */
+}
+.custom-paginator .p-paginator-page.p-highlight {
+  background-color: #10151b; /* Active page background color */
+  color: white; /* Active page text color */
+  border: 2px dashed #4a4a4a;
+}
+.custom-paginator .p-paginator-page:hover {
+  background-color: #10151b /* Change background on hover */
+}
+/* Add padding and hover effect to the buttons */
+.custom-paginator .p-paginator-page {
+  padding: 3px 12px;
+  border-radius: 7px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.p-dropdown.p-component.p-inputwrapper.p-inputwrapper-filled {
+  gap: 14px;
+  border: 2px dashed #979797;
+  padding: 0px 3px;
+  border-radius: 3px;
+}
+
+.dark .p-paginator-first.p-paginator-element.p-link:not(.p-disabled) svg,
+.dark .p-paginator-prev.p-paginator-element.p-link:not(.p-disabled) svg,
+.dark .p-paginator-next.p-paginator-element.p-link:not(.p-disabled) svg,
+.dark .p-paginator-last.p-paginator-element.p-link:not(.p-disabled) svg
+{
+  color: #ffffff;
+}
+.custom-paginator .p-paginator-prev,
+.custom-paginator .p-paginator-next {
+  padding: 8px 12px; /* Add padding for prev/next buttons */
+}
+
+.p-paginator-pages {
+  gap: 5px !important;
+  display: flex !important;
+}
+
+.p-datatable-tbody tr:nth-child(even) {
+  background-color: #f3f4f6; 
+}
+
+.p-datatable-tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Dark mode support */
+.dark .p-datatable-tbody tr:nth-child(even) {
+  background-color: #1f2937; /* Dark mode even row (gray-800) */
+}
+
+.dark .p-datatable-tbody tr:nth-child(odd) {
+  background-color: #111827; /* Dark mode odd row (gray-900) */
+}
+.dark .p-datatable-tbody td {
+  color: #d5d5d5;
+}
+.dark .custom-paginator.p-paginator.p-component {
+  background-color: #111827; /* Dark mode odd row (gray-900) */
+}
+.dark .p-resizable-column.p-reorderable-column {
+  background-color: #1f2937;
+  color: #fff !important;
+}
+tr th, .p-datatable-tbody tr td {
+  padding: 10px;
+}
+.dark .p-dropdown-label.p-inputtext {
+  color: #fff !important;
+}
+.dark .p-dropdown.p-component.p-inputwrapper.p-inputwrapper-filled {
+  background-color: transparent !important;
+}
+
+
+.p-column-filter-overlay.p-component.p-fluid.p-column-filter-overlay-menu.p-ripple-disabled.p-connected-overlay-enter-done {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
